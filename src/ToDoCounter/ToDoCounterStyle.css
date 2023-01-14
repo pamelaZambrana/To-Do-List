@@ -1,0 +1,12 @@
+h2{
+    width: 100%;
+    padding:20px 15px 10px 15px;
+    margin: -10px 0 10px 0;
+    font-family: Raleway, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: black;
+    background-color: rgb(219, 242, 38);
+    border-radius: 0 0 15px 15px;    
+}
+

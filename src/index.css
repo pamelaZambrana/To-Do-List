@@ -1,0 +1,56 @@
+:root{
+  --ligth-green: #DBF227;
+  --ligth-green2:#9FC131;
+  --teal-green:#005C53;
+  --dark-blue:#042940;
+  --ligth-blue: rgb(174, 174, 253);
+
+
+}
+*{
+  box-sizing: border-box;
+}
+html{
+  font-size: 62.5%;
+}
+body {
+  width: 100%;
+  min-width: 250px;
+  margin: 0 auto;
+  overflow: scroll;
+  background-image: url(./images/background6.png);
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+nav h1{
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  background-color: var(--dark-blue);
+  border-radius: 0 0 15px 15px;
+  color: white;
+  font-size: 4rem;
+  font-family: Lora, sans-serif;
+  font-weight: 600;
+  z-index: 2;
+}
+#root{
+  
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+

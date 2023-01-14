@@ -1,0 +1,41 @@
+.add-button{
+    position: fixed;   
+    right: 5px;
+    bottom: 5px;
+    width: 55px;
+    height:55px;
+    background-color: var(--ligth-green);
+    border: none;
+    border-radius: 50%;
+    z-index: 2;
+}
+.add-button-icon{
+    font-size: 4rem;
+    color: var(--dark-blue);
+    border: solid 2px white;
+    border-radius: 50%;
+}
+
+.add-button-icon :hover{
+    cursor: pointer;
+}
+
+@media (min-width:600px){
+    .add-button{
+        width: 90px;
+    height: 90px;
+    }
+    .add-button-icon{
+        font-size: 6rem;
+    }
+}
+
+@media (max-width:300px){
+    .add-button{
+        width: 45px;
+    height: 45px;
+    }
+    .add-button-icon{
+        font-size: 3rem;
+    }
+}

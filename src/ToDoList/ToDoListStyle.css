@@ -1,0 +1,24 @@
+.list-container{
+    max-width: 350px;
+    min-width: 200px;
+    margin: 10px 20px;
+    padding: 0 15px;
+    background-color: rgba(233, 229, 229, 0.7);
+    z-index: 1;
+}
+.list-container ul{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0;
+    list-style-type: none;
+    justify-content: center;
+    z-index: 2;
+}
+.list-container li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    
+}

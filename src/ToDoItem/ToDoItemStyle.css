@@ -1,0 +1,39 @@
+.Xmark-icon{
+    align-self: start;
+    position: relative;
+    left: 0px;
+    padding: 5px;
+    font-size: 1.8rem;
+    color: var(--ligth-green2);
+    background-color: var(--dark-blue);
+    border-radius: 0% 50% 0% 0;
+}
+.Xmark-icon :hover{
+    color: var(--ligth-green);
+}
+.check-icon{
+    font-size: 1rem;
+    padding: 5px;
+    color: rgb(175, 174, 174);
+    border: solid 1px var(--dark-blue);
+    
+}
+.check-icon--active{
+    color: var(--ligth-green);
+    background-color: var(--dark-blue);
+}
+.ToDoItem-p{
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+    font-size: 1.6rem;
+    font-family: Raleway, sans-serif;
+    font-weight: 400;
+    background-color: rgb(159, 193, 49,0.8);
+    border-radius: 20px 0px 0px 20px;
+    
+}
+.ToDoItem-p--completed{
+    text-decoration: line-through;
+    background-color: rgba(179, 185, 190, 0.6);
+}
