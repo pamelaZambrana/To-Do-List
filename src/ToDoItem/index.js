@@ -17,14 +17,15 @@ function ToDoItem(props){
     }*/
 
     return (
-        <li>
+        <li className="ToDoItem">
             <FontAwesomeIcon 
-            className={` Icon check-icon ${props.completed && 'check-icon--active'} `} icon="check" 
+            className={` Icon check-icon ${props.completed && 'check-icon--active'} `} 
+            icon="check" 
             onClick={props.onComplete}
             />
             <p className={`ToDoItem-p ${props.completed && 'ToDoItem-p--completed'}`}>
                 {props.text}
-                </p>
+            </p>
             <FontAwesomeIcon 
             className="Xmark-icon" icon="xmark" 
             onClick={props.onDelete}

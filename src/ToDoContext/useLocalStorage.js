@@ -15,7 +15,7 @@ function useLocalStorage(itemName,initialValue){
         try{//Almacenando las tareas en local storage
           const localStorageItem = localStorage.getItem(itemName);
           let parsedItem;
-  
+          
           //lógica para el almacenamiento de información
           if(!localStorageItem){
             localStorage.setItem(itemName, JSON.stringify(initialValue));
@@ -29,7 +29,7 @@ function useLocalStorage(itemName,initialValue){
         }catch (error){
           setError(error);
         };
-      },1500);
+      },1000);
     });
   
     //función para actualizar el local store al usar check o delete

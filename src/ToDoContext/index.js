@@ -14,28 +14,38 @@ function ToDoProvider(props){
   
   //creando el estado para el search
   const [searchValue, setSearchValue]=React.useState("");
-  //const [control, setControl]=React.useState("unsearch");
+ //creando un nuevo estado para el modal
+  const [openModal, setOpenModal]=React.useState(false);
 
   //contando los ToDos completos y la cantidad total de ToDos
   const totalToDos=toDos.length;
   const completedToDos=toDos.filter(item=>!!item.completed).length;
-
   //array de toDos buscados
   let searchedToDos=[]
-      
+    
   if(!searchValue>=1){
-    searchedToDos = toDos;
+    searchedToDos = [...toDos];
   }else{
-      searchedToDos=toDos.filter(item=>{
-        const toDoText=item.text.toLowerCase();
+      searchedToDos=toDos.filter((toDo)=>{
+        const toDoText=toDo.text.toLowerCase();
         const searchText=searchValue.toLowerCase();
         return toDoText.includes(searchText);
       });
   };
 
+  //Añadir nuevo ToDo
+  const addToDo=(text)=>{
+    const newToDos=[...toDos];
+      newToDos.push({
+        completed: false,
+        text,
+      });
+      saveToDos(newToDos);
+  };
+
   //actualizar la lista con tareas completadas
   const completeToDos=(text)=>{
-    const toDoIndex=toDos.findIndex(item=>item.text===text)
+    const toDoIndex=toDos.findIndex((item)=>(item.text===text));
     const newItem=[...toDos];
     newItem[toDoIndex].completed=true;
     saveToDos(newItem);
@@ -48,9 +58,9 @@ function ToDoProvider(props){
     newItem.splice(toDoIndex,1);
     saveToDos(newItem);
   };
-
-    return(
-        <ToDoContext.Provider value={{
+  
+  return(
+      <ToDoContext.Provider value={{
             error,
             loading,
             totalToDos,
@@ -60,10 +70,13 @@ function ToDoProvider(props){
             searchedToDos,
             completeToDos,
             deleteToDos,
+            openModal,
+            setOpenModal,
+            addToDo,
         }}>
             {props.children}
         </ToDoContext.Provider>
-    );
+  );
 };
 
 export {ToDoContext, ToDoProvider};

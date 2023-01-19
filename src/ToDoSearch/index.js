@@ -1,4 +1,5 @@
 import React from "react";
+import { ToDoContext } from "../ToDoContext";
 import "./ToDoSearchStyle.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -7,8 +8,9 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 library.add(faMagnifyingGlass);
 
 
-function ToDoSearch({searchValue, setSearchValue/*,control,setControl*/}){
-    //const [searchValue, setSearchValue]=React.useState("");
+function ToDoSearch(){
+    const {searchValue, setSearchValue}=React.useContext(ToDoContext);
+
     const searchListener = (event)=>{
             console.log(event.target.value);
             setSearchValue(event.target.value);
