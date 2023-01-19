@@ -1,5 +1,6 @@
 import React from "react";
 import { ToDoContext } from "../ToDoContext";
+import "./ToDoFormStyle.css";
 
 function ToDoForm(){
 
@@ -22,21 +23,26 @@ function ToDoForm(){
     };
     return(
 
-        <form onSubmit={onSubmit}>
-            <label>...</label>
+        <form 
+            className="addToDo-form"
+            onSubmit={onSubmit}>
+            <label className="textArea-label">Add a new task</label>
             <textarea 
+                className="textArea"
                 placeholder="New Task..."
                 value={newToDoValue}
                 onChange={onChange}
             />
-            <div>
-                <button
+            <div className="cancel-add-button-container">
+                <button 
+                    className="cancel-button"
                     type="button"
                     onClick={onCancel}
                 >
                     Cancel
                 </button>
                 <button
+                    className="submit-button"
                     type="submit"
                 >
                     Add

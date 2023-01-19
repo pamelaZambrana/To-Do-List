@@ -7,7 +7,7 @@ function ToDoCounter({total, complete}){
 
     return (
         <h2 className="ToDoCounter-text">
-           {completedToDos} from {totalToDos} completed tasks
+           {completedToDos} FROM {totalToDos} COMPLETED TASK
         </h2>
     );
 

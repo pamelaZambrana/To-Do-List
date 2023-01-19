@@ -13,11 +13,32 @@ input{
     border-radius: 10px;
     border: solid 0.5px var(--dark-blue);
 }
-.search-icon {
+.search-icon-true {
+    z-index: 0;
+    display: none;
+    
+}
+.search-icon-false {
     align-self: center;
     font-size: 1.5rem;
     padding: 10px;
     background-color: var(--dark-blue);
     color: white;
     border-radius: 50%;
+    z-index: 1;
+}
+.Xsearch-icon-true{
+    z-index: 0;
+    display: none;
+    
+}
+.Xsearch-icon-false{
+    z-index: 1;
+    align-self: center;
+    font-size: 1.5rem;
+    padding: 10px;
+    background-color: var(--dark-blue);
+    color: white;
+    border-radius: 50%;
+    
 }

@@ -16,6 +16,9 @@ function ToDoProvider(props){
   const [searchValue, setSearchValue]=React.useState("");
  //creando un nuevo estado para el modal
   const [openModal, setOpenModal]=React.useState(false);
+  //creando un nuevo estado para el botón search
+  const [searchButton, setSearchButton]=React.useState(false);
+ 
 
   //contando los ToDos completos y la cantidad total de ToDos
   const totalToDos=toDos.length;
@@ -23,9 +26,9 @@ function ToDoProvider(props){
   //array de toDos buscados
   let searchedToDos=[]
     
-  if(!searchValue>=1){
+  if(/*!searchValue>=1 &&*/ searchButton===false){
     searchedToDos = [...toDos];
-  }else{
+  }else if(/*searchValue>=1 &&*/ searchButton===true){
       searchedToDos=toDos.filter((toDo)=>{
         const toDoText=toDo.text.toLowerCase();
         const searchText=searchValue.toLowerCase();
@@ -47,7 +50,7 @@ function ToDoProvider(props){
   const completeToDos=(text)=>{
     const toDoIndex=toDos.findIndex((item)=>(item.text===text));
     const newItem=[...toDos];
-    newItem[toDoIndex].completed=true;
+    newItem[toDoIndex].completed=!newItem[toDoIndex].completed;
     saveToDos(newItem);
   };
   
@@ -67,6 +70,8 @@ function ToDoProvider(props){
             completedToDos,
             searchValue,
             setSearchValue,
+            searchButton,
+            setSearchButton,
             searchedToDos,
             completeToDos,
             deleteToDos,
