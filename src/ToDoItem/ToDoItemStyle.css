@@ -1,15 +1,13 @@
 .Xmark-icon{
     align-self: start;
-    position: relative;
-    left: 0px;
-    padding: 5px;
-    font-size: 1.8rem;
-    color: var(--ligth-green2);
-    background-color: var(--dark-blue);
-    border-radius: 0% 50% 0% 0;
+    padding: 4px;
+    font-size: 1.5rem;
+    color: var(--dark-blue);
+    border: solid 1px var(--dark-blue);
+    border-radius: 50%;
 }
 .Xmark-icon :hover{
-    color: var(--ligth-green);
+    color:red;
 }
 .check-icon{
     font-size: 1rem;

@@ -7,6 +7,9 @@ import { ToDoItem } from "../ToDoItem";
 import {ToDoForm} from "../ToDoForm";
 import { ToDoButton } from "../ToDoButton";
 import { Modal } from "../modal";
+import {ToDosError} from "../ToDosError";
+import {ToDosLoading} from "../ToDosLoading";
+import {EmptyToDos} from "../EmptyToDos";
 
 
 
@@ -25,9 +28,9 @@ function AppUI(){
       <ToDoSearch/>
       <ToDoList>
         {/*creando tres estados de carga*/}
-        {error && <p>There was an error...</p>}
-        {loading && <p>Loading...</p>}
-        {(!loading && !searchedToDos.length) && <p>Create a task</p>}
+        {error && <ToDosError error={error}></ToDosError>}
+        {loading && <ToDosLoading></ToDosLoading>}
+        {(!loading && !searchedToDos.length) && <EmptyToDos></EmptyToDos>}
         {searchedToDos.map(item=>{
           return (
             <ToDoItem 

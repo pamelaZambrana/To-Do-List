@@ -1,12 +1,13 @@
 .list-container{
-    max-width: 350px;
-    min-width: 200px;
+    max-width: 700px;
+    min-width: 270px;
     margin: 10px 20px;
-    padding: 0 15px 50px 0;
-    background-color: rgba(233, 229, 229, 0.7);
+    padding: 0 05px 50px 0;
+    
     z-index: 1;
 }
 .list-container ul{
+    width: 90%;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -16,9 +17,11 @@
     z-index: 2;
 }
 .list-container li{
+    
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 5px;
     
 }
+

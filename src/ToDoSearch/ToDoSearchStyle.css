@@ -1,4 +1,5 @@
 .search-container{
+    width: 80%;
     display: flex;
     z-index: 1;
     justify-content: center;
@@ -27,6 +28,9 @@ input{
     border-radius: 50%;
     z-index: 1;
 }
+.search-icon-false:hover{
+    cursor: pointer;
+}
 .Xsearch-icon-true{
     z-index: 0;
     display: none;
@@ -39,6 +43,8 @@ input{
     padding: 10px;
     background-color: var(--dark-blue);
     color: white;
-    border-radius: 50%;
-    
+    border-radius: 50%; 
+}
+.Xsearch-icon-false:hover{
+    cursor: pointer;
 }

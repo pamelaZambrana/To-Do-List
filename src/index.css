@@ -33,6 +33,7 @@ code {
 nav h1{
   position: relative;
   margin: 0 auto;
+  min-width: 270px;;
   text-align: center;
   background-color: var(--dark-blue);
   border-radius: 0 0 15px 15px;
@@ -52,6 +53,13 @@ nav h1{
   position: absolute;
   z-index: auto;
   flex-wrap: wrap;
+}
+#root section{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(233, 229, 229, 0.7);
 }
 #modal{
   width: 100%;
