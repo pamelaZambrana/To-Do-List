@@ -1,6 +1,7 @@
 
 .modal-container{
     position: fixed;
+    top: calc(25vh );
     display: flex;
     justify-content: center;
     align-items: center;

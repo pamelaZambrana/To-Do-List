@@ -12,7 +12,6 @@ import {ToDosLoading} from "../ToDosLoading";
 import {EmptyToDos} from "../EmptyToDos";
 
 
-
 function AppUI(){
   const {
     error,
@@ -21,6 +20,7 @@ function AppUI(){
     completeToDos,
     deleteToDos,
     openModal,
+
    }=React.useContext(ToDoContext);
   return (
     <React.Fragment>

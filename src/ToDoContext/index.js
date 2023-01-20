@@ -18,7 +18,7 @@ function ToDoProvider(props){
   const [openModal, setOpenModal]=React.useState(false);
   //creando un nuevo estado para el botón search
   const [searchButton, setSearchButton]=React.useState(false);
- 
+  
 
   //contando los ToDos completos y la cantidad total de ToDos
   const totalToDos=toDos.length;
@@ -56,10 +56,12 @@ function ToDoProvider(props){
   
   //actualizar la lista sin tareas borradas
   const deleteToDos=(text)=>{
-    const toDoIndex=toDos.findIndex(item=>item.text===text)
-    const newItem=[...toDos];
-    newItem.splice(toDoIndex,1);
-    saveToDos(newItem);
+
+      const toDoIndex=toDos.findIndex(item=>item.text===text)
+      const newItem=[...toDos];
+      newItem.splice(toDoIndex,1);
+      saveToDos(newItem);
+    
   };
   
   return(

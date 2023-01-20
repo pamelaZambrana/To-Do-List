@@ -5,16 +5,8 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { faMagnifyingGlass, faCheck, faBomb,faCirclePlus,faXmark } from "@fortawesome/free-solid-svg-icons";
 library.add(faMagnifyingGlass, faCheck,faBomb, faCirclePlus,faXmark);
 
-
 function ToDoItem(props){
-    //definiendo eventos
-   /* const checkEvent=()=>{
-        alert(`Completaste la tarea: ${props.text}`);
-    };*/
-    
-   /* const deleteEvent=()=>{
-        alert(`Borraste la tarea: ${props.text}`)
-    }*/
+
 
     return (
         <li className="ToDoItem">
